@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNotepadMAUI.MainPage">
+
+    <ScrollView  VerticalOptions="Center">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Окно авторизации"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+
+            <Entry
+                x:Name="entryLogin"
+                Placeholder ="Введите логин"
+                FontFamily="Helvetica"
+                FontSize="20"
+                MaxLength = "20"
+                ></Entry>
+
+            <Entry
+                x:Name="entryPassword"
+                Placeholder ="Введите пароль"
+                FontFamily="Helvetica"
+                FontSize="20"
+                MaxLength = "20"
+                ></Entry>
+
+            <Button
+                x:Name="BtnAut"
+                Text="Вход"
+                SemanticProperties.Hint="Введите лонин  и пароль и нажмите на кнопку"
+                Clicked="BtnAut_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
