@@ -4,7 +4,7 @@
              x:Class="AppNotepadMAUI.Pages.PageMenu"
              Title="PageMenu">
     <VerticalStackLayout>
-        <Label 
+        <Label  Margin="50" x:Name="lanelName"
             Text="Вы вошли в систему"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />

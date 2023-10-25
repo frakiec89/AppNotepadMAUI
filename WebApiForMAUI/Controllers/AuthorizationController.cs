@@ -11,7 +11,9 @@ namespace WebApiForMAUI.Controllers
         [HttpPost("logIn")]
         public ActionResult<UserRespons> GetUser(UserRequst respons)
         {
-            return Ok( new UserRespons () { Id = 1 , UserName="test"});
+            if(respons.Login == "admin" && respons.Password == "123")
+            return Ok( new UserRespons () { Id = 1 , UserName="Admin"});
+            else return BadRequest("такого пользователя нет");
         }
     }
 }

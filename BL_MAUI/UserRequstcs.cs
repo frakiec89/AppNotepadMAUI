@@ -8,7 +8,7 @@ namespace AppNotepadMAUI.Model
 {
     internal class UserRequstcs
     {
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public string login { get; set; }
+        public string password { get; set; }
     }
 }

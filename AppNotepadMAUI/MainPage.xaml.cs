@@ -1,4 +1,7 @@
-﻿namespace AppNotepadMAUI;
+﻿using System.Net;
+using System.Text;
+
+namespace AppNotepadMAUI;
 
 public partial class MainPage : ContentPage
 {
@@ -15,8 +18,8 @@ public partial class MainPage : ContentPage
             = new Services.Authorization();
         try
         {
-            authorization.GetUser(entryLogin.Text, entryPassword.Text);
-            Pages.PageMenu pageMenu = new Pages.PageMenu();
+            var us =  authorization.GetUser(entryLogin.Text, entryPassword.Text);
+            Pages.PageMenu pageMenu = new Pages.PageMenu(us.UserName);
             await Navigation.PushModalAsync(pageMenu);
         }
         catch (Exception ex)
@@ -27,5 +30,8 @@ public partial class MainPage : ContentPage
             entryLogin.Focus();
         }
     }
+
+
+   
 }
 
